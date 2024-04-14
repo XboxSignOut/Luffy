@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luffy | SheCodes Bassics Add-on Project</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="dark">
+    <a href="https://github.com/XboxSignOut" target="_blank">
+      <img src="images/logo.png" class="logo" alt="Vaibhavi Logo" />
+      <img src="images/logo-dark.png" class="logo-light" alt="Vaibhavi Logo" />
+    </a>
+    <button id="change-theme-button" class="change-theme-button">
+      Change theme
+    </button>
+    <div class="container">
+      <h1>🏴‍☠️ Who is Luffy?</h1>
+      <h2>My favorite anime character</h2>
+      <a href="#" target="_blank">
+        <img src="images/One-Piece-.webp" class="yogurt-picture" alt="Luffy" />
+      </a>
+      <div class="grid">
+        <img
+          src="images/4fb2b135278925f953422a2af606b5b7.png"
+          class="picture-grid"
+          alt="Luffy"
+        />
+        <img src="images/950704.jpg" class="picture-grid" alt="Luffy" />
+
+        <img
+          src="images/Gear-2nd-Luffy-One-Piece-Wallpaper.jpg"
+          class="picture-grid"
+          alt="Luffy"
+        />
+        <img
+          src="images/monkey-d-luffy-de-one-piece-4015.webp"
+          class="picture-grid"
+          alt="Luffy"
+        />
+      </div>
+
+      <div class="description">
+        <p>
+          Monkey D. Luffy is the protagonist of the One Piece anime and manga
+          series. He is a pirate with the goal of finding the One Piece treasure
+          and becoming the Pirate King. Luffy is known for his straw hat and his
+          ability to stretch his body like rubber due to eating the Gum-Gum
+          Fruit.
+          <br /><br />
+          📖
+          <a href="https://onepiece.fandom.com/wiki/Monkey_D._Luffy">
+            <strong> Learn more about Luffy </strong>
+          </a>
+        </p>
+      </div>
+
+      <button id="order-button" class="order-button">Join Luffy's crew</button>
+
+      <p>
+        <small>
+          Coded by 👩‍💻
+          <a href="https://github.com/XboxSignOut/Luffy" target="_blank"
+            >Vaibhavi</a
+          >
+          with HTML, CSS and JavaScript
+        </small>
+      </p>
+    </div>
+
+    <script>
+      function joinCrew() {
+        let experience = prompt("Have you sailed the Grand Line before?");
+        let name = prompt("What is your name?");
+        let age = prompt("How old are you?");
+
+        if (age >= 18 && age <= 70) {
+          alert(
+            "Welcome aboard, " +
+              name +
+              "! We'll contact you soon with more details. Feel free to contact us if you have any questions at hello@shecodes.io"
+          );
+        } else if (age < 18) {
+          alert(
+            "Sorry, you must be at least 18 years old to join Luffy's crew."
+          );
+        } else {
+          alert(
+            "Welcome aboard, " +
+              name +
+              "! It's never too late to set sail. We'll contact you soon with more details. Feel free to contact us if you have any questions at hello@shecodes.io"
+          );
+        }
+      }
+
+      function toggleTheme() {
+        if (theme === "light") {
+          theme = "dark";
+          document.querySelector("body").classList.add("dark");
+        } else {
+          theme = "light";
+          document.querySelector("body").classList.remove("dark");
+        }
+      }
+
+      let button = document.querySelector("#order-button");
+      button.addEventListener("click", joinCrew);
+
+      let theme = "dark";
+      let themeButton = document.querySelector("#change-theme-button");
+      themeButton.addEventListener("click", toggleTheme);
+    </script>
+  </body>
+</html>
